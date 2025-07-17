@@ -1,0 +1,33 @@
+- name: "ICARUSGUNDAMWorkshop25"
+
+  isEnabled: true
+
+  selectedDataEntry: "FakeDataFromMC"
+
+  showSelectedEventCount: true
+
+  mc:
+    tree: "SelectedEvents_NSigmas"
+    filePathList:
+      - "${GUNDAM_TREE_DIR}/${GUNDAM_INPUT_JOBNAME}/MCTree.root"
+    # - MC POT: 2.14969e+19
+    # - POT to normalize: 2.5E20
+    # - Flux weight
+    #   - Is CosmicSlice (IsSignal==5), applying 0.67937750173924; avergae flux weight
+    #   - If not, i.e., neutirno-matched slice, apply Flux weight, "NuMIFluxCorrection"
+    nominalWeightFormula: "(2.5e+20/2.14969e+19) * (IsSignal==5 ? 0.67937750173924 : NuMIFluxCorrection)"
+
+  data:
+    # data from the same MC
+    - name: "FakeDataFromMC"
+      tree: "SelectedEvents_NSigmas"
+      nominalWeightFormula: "(2.5e+20/2.14969e+19) * (IsSignal==5 ? 0.67937750173924 : NuMIFluxCorrection)"
+      filePathList:
+        - "${GUNDAM_TREE_DIR}/${GUNDAM_INPUT_JOBNAME}/MCTree.root"
+
+    # data from the same MC
+    - name: "TrueMuonPLinearScaled"
+      tree: "SelectedEvents_NSigmas"
+      nominalWeightFormula: "(2.5e+20/2.14969e+19) * (IsSignal==5 ? 0.67937750173924 : (NuMIFluxCorrection) * (IsSignal==1 ? 1. + 1. * TrueMuonP : 1.) )"
+      filePathList:
+        - "${GUNDAM_TREE_DIR}/${GUNDAM_INPUT_JOBNAME}/MCTree.root"
