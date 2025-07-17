@@ -1,3 +1,6 @@
+#!/bin/bash
+# Load packages from spack
+
 # spack env
 . /cvmfs/larsoft.opensciencegrid.org/spack-v0.22.0-fermi/setup-env.sh
 
