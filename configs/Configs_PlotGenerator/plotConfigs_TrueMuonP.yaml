@@ -8,7 +8,7 @@ varDictionnaries:
       - { value: 1, title: "signal", color: 855 } # kOrange
 
 histogramsDefinition:
-  - varToPlot: "RecoMuonP"
+  - varToPlot: "TrueMuonP"
     splitVars: ["IsSignal"]
     useSampleBinning: true
     rescaleAsBinWidth: false

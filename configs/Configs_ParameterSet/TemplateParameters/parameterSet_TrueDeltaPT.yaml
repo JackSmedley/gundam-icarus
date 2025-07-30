@@ -1,4 +1,4 @@
-name: Template Parameter TrueMuonP
+name: Template Parameter TrueDeltaPT
 isEnabled: true
 
 printDialSetsSummary: true
@@ -7,10 +7,10 @@ nominalStepSize: 0.1
 useOnlyOneParameterPerEvent: true
 
 dialSetDefinitions:
-  - name: Template Parameter TrueMuonP dialSetDefinitions
+  - name: Template Parameter TrueDeltaPT dialSetDefinitions
     # 'applyOnDataSets' can take a list or a wildcard
     applyOnDataSets: ["*"]
-    parametersBinningPath: "${GUNDAM_CONFIG_DIR}/binnings/binning_TrueMuonP.txt"
+    parametersBinningPath: "${GUNDAM_CONFIG_DIR}/binnings/binning_TrueDeltaPT.txt"
     applyCondition: "[IsSignal] == 1"
     printDialsSummary: true
 

@@ -17,3 +17,6 @@ spack load /b2vqwgc
 
 # xrootd
 spack load xrootd@5.6.9%gcc@12.2.0
+
+#Path to example configs for 2025 GUNDAM workshop
+export GUNDAM_CONFIG_DIR="$PWD/configs"

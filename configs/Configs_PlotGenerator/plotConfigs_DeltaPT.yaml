@@ -8,11 +8,11 @@ varDictionnaries:
       - { value: 1, title: "signal", color: 855 } # kOrange
 
 histogramsDefinition:
-  - varToPlot: "RecoMuonP"
+  - varToPlot: "DeltaPT"
     splitVars: ["IsSignal"]
     useSampleBinning: true
     rescaleAsBinWidth: false
-    xTitle: "p_{#mu} (GeV/c)"
+    xTitle: "#deltap_{T} (GeV/c)"
     yTitle: "Slices"
     xMax: 3.2
 
